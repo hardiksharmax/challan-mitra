@@ -1,5 +1,6 @@
 package com.marakions.challan_mitra;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,14 +27,17 @@ public class challanpayment extends AppCompatActivity {
         addressEt =findViewById(R.id.Address);
         payBt =findViewById(R.id.Payamount);
 
-        String amount = getIntent().getStringExtra("amount");
-        String challanNo = getIntent().getStringExtra("challan_number");
+        final String amount = getIntent().getStringExtra("amount");
+        final String challanNo = getIntent().getStringExtra("challan_number");
 
         challanAmountTv.setText(amount);
         payBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(challanpayment.this,paymentgateway.class);
+                intent.putExtra("challan_number",challanNo);
+                intent.putExtra("amount",amount);
+                startActivity(intent);
             }
         });
     }
