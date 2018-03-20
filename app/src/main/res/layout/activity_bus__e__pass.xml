@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#F2DE64"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingBottom="8dp">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/proceed_bt"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/Studentname_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Studentname"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Student Name"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/Studentname_fill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="Name"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Collegename_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Studentname_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/collegename"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="College Name"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/collegename_fill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="college name"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Rollno_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Collegename_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Rollno"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Roll No"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/Rollnofill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="Roll No"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/StudentAddress_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Rollno_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/StudentAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Address"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/StudentAddress_fill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="Address"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Course_name_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/StudentAddress_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Course_name"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Course Name"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/Course_name_fill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="Course Name"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Source_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Course_name_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Source"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Source"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/sourcefill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="Source"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Destination_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Source_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Destination"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Destination"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/Destinationfill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="Destination"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Mobileno_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Destination_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Mobileno"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Mobile No"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/Mobilenofill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="Mobile No"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Email_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Mobileno_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Email"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Email-ID"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/Emailfill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint="Destination"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/proceed_bt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/mitti"
+        android:text="Proceed" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_student_deatils"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
+</RelativeLayout>
+
+
+
+
