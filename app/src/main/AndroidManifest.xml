@@ -21,7 +21,8 @@
         <activity android:name=".challandetail" />
         <activity android:name=".challanpayment" />
         <activity android:name=".paymentgateway" />
-        <activity android:name=".Paymentsuccesfull"></activity>
+        <activity android:name=".Paymentsuccesfull" />
+        <activity android:name=".Bus_E_Pass"></activity>
     </application>
 
 </manifest>
