@@ -15,11 +15,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.marakions.challan_mitra.beanclasses.ChallanItem;
 import com.marakions.challan_mitra.utils.Constants;
+import com.wang.avi.AVLoadingIndicatorView;
 
 public class challandetail extends AppCompatActivity {
 
     TextView challanNoTv, nameTv, dateTv, locationTv, categoryTv, amountTv;
     private ChallanItem challanItem;
+
+    AVLoadingIndicatorView avi;
+    private Button proceed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +37,9 @@ public class challandetail extends AppCompatActivity {
         categoryTv = findViewById(R.id.Challancatview);
         amountTv = findViewById(R.id.Challanamtview);
 
-        Button proceed = findViewById(R.id.proceed_bt);
+        avi = findViewById(R.id.avi_challan_details);
+
+        proceed = findViewById(R.id.proceed_bt);
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,10 +57,14 @@ public class challandetail extends AppCompatActivity {
     }
 
     private void fetchChallanDetails(final String challanNo) {
+        proceed.setVisibility(View.GONE);
+        avi.smoothToShow();
         DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child(Constants.CHILD_ROOT).child(challanNo);
         dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                avi.smoothToHide();
+                proceed.setVisibility(View.VISIBLE);
                 if (dataSnapshot != null) {
                     challanItem = dataSnapshot.getValue(ChallanItem.class);
                     if (challanItem==null){
