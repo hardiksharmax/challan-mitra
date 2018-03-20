@@ -7,4 +7,6 @@ package com.marakions.challan_mitra.utils;
 public class Constants {
 
     public static final String CHILD_ROOT = "e-challan";
+
+    public static int STORAGE_PERMISSION_CODE = 10001;
 }

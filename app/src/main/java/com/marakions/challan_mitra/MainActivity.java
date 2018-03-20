@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
                 break;
             case R.id.Buspass:
-
+                intent = new Intent(this,Bus_E_Pass.class);
+                startActivity(intent);
                 break;
 
             case R.id.FAQ:

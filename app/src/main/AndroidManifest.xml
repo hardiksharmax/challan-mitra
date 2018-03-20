@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.marakions.challan_mitra">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,7 +29,7 @@
         <activity android:name=".Paymentsuccesfull" />
         <activity android:name=".Bus_E_Pass" />
         <activity
-            android:name=".utils.Docupload"
+            android:name=".Docupload"
             android:label="@string/title_activity_docupload"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
