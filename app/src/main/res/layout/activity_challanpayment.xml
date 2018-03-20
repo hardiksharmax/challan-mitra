@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2DE64"
     android:animateLayoutChanges="true"
+    android:background="#F2DE64"
     android:orientation="vertical"
     android:padding="16dp"
     android:paddingBottom="8dp">
@@ -30,7 +30,6 @@
             android:id="@+id/Challan_payment_amntview"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:paddingLeft="16dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
@@ -38,47 +37,105 @@
             android:drawablePadding="@dimen/dimen_8dp"
             android:gravity="end"
             android:padding="@dimen/dimen_8dp"
+            android:paddingLeft="16dp"
 
             android:textColor="@android:color/black"
             android:textColorHint="#90FFFFFF"
             android:textSize="16sp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/Challan_delivery_ll"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_8dp"
         android:layout_below="@+id/Challan_payment_amnt_ll"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:orientation="horizontal"
         android:weightSum="3">
+
         <CheckBox
             android:id="@+id/deliverycheck"
-            android:layout_height="20dp"
             android:layout_width="35dp"
+            android:layout_height="20dp"
             android:layout_marginTop="@dimen/dimen_16dp"
             android:layout_weight=".1"
-            android:clickable="true"
-            />
+            android:clickable="true" />
+
         <TextView
             android:id="@+id/Challan_deliver_condition"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_weight="2"
             android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_weight="2.5"
 
 
+            android:text="Document home delivery.*Charges Apply"
             android:textColor="@android:color/black"
             android:textColorHint="#90FFFFFF"
-            android:textSize="16sp"
-            android:text="Document home delivery.*Charges Apply"/>
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/deliveryamnt"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+
+
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_weight=".4"
+            android:background="#55FFFFFF"
+            android:drawablePadding="@dimen/dimen_8dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_8dp"
             android:paddingLeft="16dp"
+            android:text="25"
+            android:textAlignment="textEnd"
+
+            android:textColor="@android:color/black"
+            android:textColorHint="#90FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/Address"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/Challan_delivery_ll"
+        android:background="#50FFFFFF"
+        android:hint="Type Address Here"
+        android:paddingLeft="@dimen/dimen_8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/total_payment_amnt_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/total_payment_amnt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="Total Amount"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
 
+        <TextView
+            android:id="@+id/total_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+
+            android:layout_below="@+id/Challan_delivery_ll"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
@@ -86,21 +143,16 @@
             android:drawablePadding="@dimen/dimen_8dp"
             android:gravity="center_vertical"
             android:padding="@dimen/dimen_8dp"
+            android:paddingLeft="16dp"
+            android:text="25"
+            android:textAlignment="viewEnd"
 
             android:textColor="@android:color/black"
             android:textColorHint="#90FFFFFF"
             android:textSize="16sp" />
 
     </LinearLayout>
-    <EditText
-        android:id="@+id/Address"
-        android:layout_height="80dp"
-        android:paddingLeft="@dimen/dimen_8dp"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/Challan_delivery_ll"
-        android:background="#50FFFFFF"
-        android:hint="Type Address Here"
-        />
+
     <Button
         android:id="@+id/Payamount"
         android:layout_width="match_parent"
@@ -108,17 +160,15 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:background="@color/mitti"
-        android:text="Pay Amount"
-        />
+        android:text="Pay Amount" />
 
     <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/avi_challan_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:visibility="gone"
         app:indicatorColor="@color/colorPrimary"
         app:indicatorName="BallSpinFadeLoaderIndicator" />
 
-</RelativeLayout>
+</LinearLayout>
