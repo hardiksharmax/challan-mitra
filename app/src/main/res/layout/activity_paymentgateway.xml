@@ -9,105 +9,105 @@
     android:paddingBottom="8dp">
 
     <LinearLayout
-        android:id="@+id/Challan_payment_amnt_ll"
+        android:id="@+id/Cardholder_name_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="3">
 
         <TextView
-            android:id="@+id/Challan_payment_amnt"
+            android:id="@+id/Personname"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="Challan Amount"
+            android:text="Card Holder Name"
             android:textColor="#000000"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/Challan_payment_amntview"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:paddingLeft="16dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:background="#55FFFFFF"
             android:drawablePadding="@dimen/dimen_8dp"
-            android:gravity="end"
+            android:gravity="center_vertical"
             android:padding="@dimen/dimen_8dp"
+            android:paddingLeft="16dp"
 
             android:textColor="@android:color/black"
             android:textColorHint="#90FFFFFF"
             android:textSize="16sp" />
 
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/Challan_delivery_ll"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
+    <TextView
+        android:id="@+id/Debit_credit_ll"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_8dp"
-        android:layout_below="@+id/Challan_payment_amnt_ll"
-        android:weightSum="3">
-        <CheckBox
-            android:id="@+id/deliverycheck"
-            android:layout_height="20dp"
-            android:layout_width="35dp"
-            android:layout_marginTop="@dimen/dimen_16dp"
-            android:layout_weight=".1"
-            android:clickable="true"
-            />
-        <TextView
-            android:id="@+id/Challan_deliver_condition"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_weight="2"
-            android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/Cardholder_name_ll"
+        android:text="Credit/Debit card"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        />
+    <EditText
+        android:id="@+id/Card_number"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:background="#55FFFFFF"
+        android:hint="Card Number"
+        android:paddingLeft="@dimen/dimen_8dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_below="@+id/Debit_credit_ll"
+        />
+    <RelativeLayout
+        android:id="@+id/CVV_expiry_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Card_number"
+        >
 
-
-            android:textColor="@android:color/black"
-            android:textColorHint="#90FFFFFF"
-            android:textSize="16sp"
-            android:text="Document home delivery.*Charges Apply"/>
-        <TextView
-            android:id="@+id/deliveryamnt"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/Exiprydate"
+            android:layout_width="120dp"
             android:layout_height="50dp"
-            android:paddingLeft="16dp"
-
-
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:hint="DD/YY"
+            android:paddingLeft="@dimen/dimen_8dp"
+            android:textColor="#000000"
             android:background="#55FFFFFF"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/CVV"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="128dp"
+            android:layout_toRightOf="@+id/Exiprydate"
+            android:layout_marginTop="20dp"
+            android:background="#55FFFFFF"
+            android:hint="CVV"
             android:drawablePadding="@dimen/dimen_8dp"
             android:gravity="center_vertical"
             android:padding="@dimen/dimen_8dp"
 
             android:textColor="@android:color/black"
-            android:textColorHint="#90FFFFFF"
+
             android:textSize="16sp" />
 
-    </LinearLayout>
-    <EditText
-        android:id="@+id/Address"
-        android:layout_height="80dp"
-        android:paddingLeft="@dimen/dimen_8dp"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/Challan_delivery_ll"
-        android:background="#50FFFFFF"
-        android:hint="Type Address Here"
-        />
+    </RelativeLayout>
     <Button
-        android:id="@+id/Payamount"
+        android:id="@+id/Pay"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:background="@color/mitti"
-        android:text="Pay Amount"
+        android:text="Pay"
         />
 
     <com.wang.avi.AVLoadingIndicatorView
@@ -119,5 +119,4 @@
         android:visibility="gone"
         app:indicatorColor="@color/colorPrimary"
         app:indicatorName="BallPulseSyncIndicator" />
-
 </RelativeLayout>

@@ -19,7 +19,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".Echallan" />
         <activity android:name=".challandetail" />
-        <activity android:name=".challanpayment"></activity>
+        <activity android:name=".challanpayment" />
+        <activity android:name=".paymentgateway"></activity>
     </application>
 
 </manifest>
