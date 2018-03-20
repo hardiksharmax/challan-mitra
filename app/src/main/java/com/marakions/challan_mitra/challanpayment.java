@@ -15,6 +15,7 @@ public class challanpayment extends AppCompatActivity {
     CheckBox homeDelivertCb;
     Button payBt;
     EditText addressEt;
+    private Thread welcomeThread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +35,27 @@ public class challanpayment extends AppCompatActivity {
         payBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(challanpayment.this,paymentgateway.class);
-                intent.putExtra("challan_number",challanNo);
-                intent.putExtra("amount",amount);
-                startActivity(intent);
+                welcomeThread.start();
             }
         });
+
+        welcomeThread = new Thread() {
+
+            @Override
+            public void run() {
+                try {
+                    super.run();
+                    sleep(10000);  //Delay of 10 seconds
+                } catch (Exception e) {
+
+                } finally {
+                    Intent intent = new Intent(challanpayment.this,paymentgateway.class);
+                    intent.putExtra("challan_number",challanNo);
+                    intent.putExtra("amount",amount);
+                    startActivity(intent);
+                }
+            }
+        };
+
     }
 }
