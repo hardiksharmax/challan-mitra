@@ -22,7 +22,11 @@
         <activity android:name=".challanpayment" />
         <activity android:name=".paymentgateway" />
         <activity android:name=".Paymentsuccesfull" />
-        <activity android:name=".Bus_E_Pass"></activity>
+        <activity android:name=".Bus_E_Pass" />
+        <activity
+            android:name=".utils.Docupload"
+            android:label="@string/title_activity_docupload"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

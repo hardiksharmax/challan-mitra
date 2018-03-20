@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">challan-mitra</string>
+    <string name="title_activity_docupload">Docupload</string>
 </resources>

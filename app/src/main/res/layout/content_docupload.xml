@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#F2DE64"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingBottom="8dp">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/proceed_bt"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/Collegeform_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Collegeform"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="College Verifcation Form"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/collegeformfill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:text="Browse Doocument"
+
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/FeeSlip_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Collegeform_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Feeslip"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="College Fee Slip"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Feeslipfill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:text="Browse Doocument"
+
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/collegeid_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/FeeSlip_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/Collegeid"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="College ID"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/collegeidfill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:text="Browse Doocument"
+
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Aadhar_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/collegeid_ll"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/AAdhar"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Aadhar ID"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/Aadharfill"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:padding="@dimen/dimen_8dp"
+                    android:paddingLeft="16dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/proceed_bt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/mitti"
+        android:text="Proceed" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_student_deatils"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
+</RelativeLayout>
+
+
+
+
