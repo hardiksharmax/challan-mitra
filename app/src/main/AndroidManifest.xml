@@ -20,7 +20,8 @@
         <activity android:name=".Echallan" />
         <activity android:name=".challandetail" />
         <activity android:name=".challanpayment" />
-        <activity android:name=".paymentgateway"></activity>
+        <activity android:name=".paymentgateway" />
+        <activity android:name=".Paymentsuccesfull"></activity>
     </application>
 
 </manifest>

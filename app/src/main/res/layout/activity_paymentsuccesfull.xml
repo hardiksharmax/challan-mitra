@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DE64"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingBottom="8dp">
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseSyncIndicator" />
+    <TextView
+        android:id="@+id/Paymentsuccess"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Payment Succesfull"
+        android:layout_alignBottom="@+id/avi_register"
+        android:layout_centerInParent="true"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        />
+    <TextView
+        android:id="@+id/Refrence"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/Paymentsuccess"
+        android:text="#REF2121221"
+        android:layout_alignBottom="@+id/avi_register"
+        android:layout_centerInParent="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        />
+</RelativeLayout>
