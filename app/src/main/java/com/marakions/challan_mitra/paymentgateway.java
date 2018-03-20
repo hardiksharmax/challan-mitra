@@ -44,12 +44,12 @@ public class paymentgateway extends AppCompatActivity {
             public void run() {
                 try {
                     super.run();
-                    sleep(10000);  //Delay of 10 seconds
+                    sleep(5000);  //Delay of 5 seconds
                 } catch (Exception e) {
 
                 } finally {
                     Intent i = new Intent(paymentgateway.this,
-                            challanpayment.class);
+                            Paymentsuccesfull.class);
                     startActivity(i);
                     finish();
                 }

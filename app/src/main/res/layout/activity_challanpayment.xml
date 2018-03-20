@@ -112,13 +112,13 @@
         />
 
     <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avi_register"
+        android:id="@+id/avi_challan_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:visibility="gone"
         app:indicatorColor="@color/colorPrimary"
-        app:indicatorName="BallPulseSyncIndicator" />
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
 
 </RelativeLayout>

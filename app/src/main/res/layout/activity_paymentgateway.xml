@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     android:background="#F2DE64"
     android:orientation="vertical"
-    android:animateLayoutChanges="true"
     android:padding="16dp"
     android:paddingBottom="8dp">
 
@@ -44,43 +44,43 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+
     <TextView
         android:id="@+id/Debit_credit_ll"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/Cardholder_name_ll"
+        android:layout_marginTop="@dimen/dimen_16dp"
         android:text="Credit/Debit card"
         android:textColor="#000000"
-        android:textSize="14sp"
-        android:layout_marginTop="@dimen/dimen_16dp"
-        />
+        android:textSize="14sp" />
+
     <EditText
         android:id="@+id/Card_number"
-        android:layout_height="50dp"
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Debit_credit_ll"
+        android:layout_marginTop="@dimen/dimen_16dp"
         android:background="#55FFFFFF"
         android:hint="Card Number"
-        android:paddingLeft="@dimen/dimen_8dp"
-        android:layout_marginTop="@dimen/dimen_16dp"
-        android:layout_below="@+id/Debit_credit_ll"
-        />
+        android:paddingLeft="@dimen/dimen_8dp" />
+
     <RelativeLayout
         android:id="@+id/CVV_expiry_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Card_number"
-        >
+        android:layout_below="@+id/Card_number">
 
         <EditText
             android:id="@+id/Exiprydate"
             android:layout_width="120dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
+            android:background="#55FFFFFF"
             android:gravity="center_vertical"
             android:hint="DD/YY"
             android:paddingLeft="@dimen/dimen_8dp"
             android:textColor="#000000"
-            android:background="#55FFFFFF"
             android:textSize="16sp" />
 
         <EditText
@@ -88,12 +88,12 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:layout_marginLeft="128dp"
-            android:layout_toRightOf="@+id/Exiprydate"
             android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/Exiprydate"
             android:background="#55FFFFFF"
-            android:hint="CVV"
             android:drawablePadding="@dimen/dimen_8dp"
             android:gravity="center_vertical"
+            android:hint="CVV"
             android:padding="@dimen/dimen_8dp"
 
             android:textColor="@android:color/black"
@@ -101,6 +101,7 @@
             android:textSize="16sp" />
 
     </RelativeLayout>
+
     <Button
         android:id="@+id/Pay"
         android:layout_width="match_parent"
@@ -108,16 +109,14 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:background="@color/mitti"
-        android:text="Pay"
-        />
+        android:text="Pay" />
 
     <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/avi_payment_gateway"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:visibility="gone"
         app:indicatorColor="@color/colorPrimary"
-        app:indicatorName="BallPulseSyncIndicator" />
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
 </RelativeLayout>

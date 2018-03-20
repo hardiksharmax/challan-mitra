@@ -248,11 +248,10 @@
         android:id="@+id/avi_challan_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:visibility="gone"
         app:indicatorColor="@color/colorPrimary"
-        app:indicatorName="BallPulseSyncIndicator" />
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
 </RelativeLayout>
 
 

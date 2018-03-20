@@ -8,20 +8,19 @@
     android:padding="16dp"
     android:paddingBottom="8dp">
     <com.wang.avi.AVLoadingIndicatorView
-        android:id="@+id/avi_register"
+        android:id="@+id/avi_payment_success"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:visibility="gone"
         app:indicatorColor="@color/colorPrimary"
-        app:indicatorName="BallPulseSyncIndicator" />
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
     <TextView
         android:id="@+id/Paymentsuccess"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="Payment Succesfull"
-        android:layout_alignBottom="@+id/avi_register"
+        android:layout_alignBottom="@+id/avi_payment_success"
         android:layout_centerInParent="true"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -33,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_below="@+id/Paymentsuccess"
         android:text="#REF2121221"
-        android:layout_alignBottom="@+id/avi_register"
+        android:layout_alignBottom="@+id/avi_payment_success"
         android:layout_centerInParent="true"
         android:textColor="#000000"
         android:textSize="20sp"

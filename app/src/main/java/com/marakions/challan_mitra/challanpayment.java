@@ -9,6 +9,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.wang.avi.AVLoadingIndicatorView;
+
 public class challanpayment extends AppCompatActivity {
 
     TextView challanAmountTv,totalAmtTv,extraAmtTv;
@@ -16,6 +18,7 @@ public class challanpayment extends AppCompatActivity {
     Button payBt;
     EditText addressEt;
     private Thread welcomeThread;
+    AVLoadingIndicatorView avi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class challanpayment extends AppCompatActivity {
         homeDelivertCb =findViewById(R.id.deliverycheck);
         addressEt =findViewById(R.id.Address);
         payBt =findViewById(R.id.Payamount);
+        avi = findViewById(R.id.avi_challan_payment);
 
         final String amount = getIntent().getStringExtra("amount");
         final String challanNo = getIntent().getStringExtra("challan_number");
@@ -35,6 +39,8 @@ public class challanpayment extends AppCompatActivity {
         payBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                avi.smoothToShow();
+                payBt.setVisibility(View.GONE);
                 welcomeThread.start();
             }
         });
@@ -45,7 +51,7 @@ public class challanpayment extends AppCompatActivity {
             public void run() {
                 try {
                     super.run();
-                    sleep(10000);  //Delay of 10 seconds
+                    sleep(5000);  //Delay of 5 seconds
                 } catch (Exception e) {
 
                 } finally {
@@ -53,6 +59,7 @@ public class challanpayment extends AppCompatActivity {
                     intent.putExtra("challan_number",challanNo);
                     intent.putExtra("amount",amount);
                     startActivity(intent);
+                    finish();
                 }
             }
         };
