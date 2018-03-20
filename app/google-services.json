@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "773463280954",
+    "firebase_url": "https://challan-mitra.firebaseio.com",
+    "project_id": "challan-mitra",
+    "storage_bucket": "challan-mitra.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773463280954:android:505d41b375dc54fe",
+        "android_client_info": {
+          "package_name": "com.marakions.challan_mitra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773463280954-r6efc8j1nca4ripqrd3a5liu81628nro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.marakions.challan_mitra",
+            "certificate_hash": "fe5127f505b2540711a8892129d3eb18839cab34"
+          }
+        },
+        {
+          "client_id": "773463280954-n2c2mr36ipgckof72a150vc5ls28oon4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2qeOE7W6Fi3ppdGvg-578PESydkODi3s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773463280954-n2c2mr36ipgckof72a150vc5ls28oon4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DE64"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/Challan_payment_amnt_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/Challan_payment_amnt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="Challan Amount"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/Challan_payment_amntview"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:paddingLeft="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="#55FFFFFF"
+            android:drawablePadding="@dimen/dimen_8dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_8dp"
+
+            android:textColor="@android:color/black"
+            android:textColorHint="#90FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

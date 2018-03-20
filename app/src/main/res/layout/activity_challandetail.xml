@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2DE64"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:paddingBottom="8dp">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/register"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/challan_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/challannumber"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Challan Number"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/challannumberview"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dimen_8dp"
+
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#90FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Name_ll"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/challan_ll"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Name"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/nmaeview"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dimen_8dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#90FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Challandate_ll"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/Name_ll"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/challandate"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Date"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/challandateview"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dimen_8dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#90FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Location_ll"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/Challandate_ll"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="location"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/locationview"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dimen_8dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#90FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Challancat_ll"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/Location_ll"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/challancat"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Category"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Challancatview"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dimen_8dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#90FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Challanamt_ll"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/Challancat_ll"
+                android:layout_height="match_parent"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/challanamt"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Amount"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/Challanamtview"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    android:background="#55FFFFFF"
+                    android:drawablePadding="@dimen/dimen_8dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dimen_8dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#90FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/mitti"
+        android:text="Pay Amount"
+        />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseSyncIndicator" />
+</RelativeLayout>
+
+
+
