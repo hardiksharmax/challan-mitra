@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/Challan_payment_amnt_ll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:weightSum="3">
 
         <TextView
@@ -43,5 +43,80 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Challan_delivery_ll"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_below="@+id/Challan_payment_amnt_ll"
+        android:weightSum="3">
+        <CheckBox
+            android:id="@+id/deliverycheck"
+            android:layout_height="20dp"
+            android:layout_width="35dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_weight=".1"
+            android:clickable="true"
+            />
+        <TextView
+            android:id="@+id/Challan_deliver_condition"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:layout_marginTop="@dimen/dimen_8dp"
+
+
+            android:textColor="@android:color/black"
+            android:textColorHint="#90FFFFFF"
+            android:textSize="16sp"
+            android:text="Document home delivery.*Charges Apply"/>
+        <TextView
+            android:id="@+id/deliveryamnt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:paddingLeft="16dp"
+
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="#55FFFFFF"
+            android:drawablePadding="@dimen/dimen_8dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_8dp"
+
+            android:textColor="@android:color/black"
+            android:textColorHint="#90FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/Address"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/Challan_delivery_ll"
+        android:background="#50FFFFFF"
+        android:hint="Type Address Here"
+        />
+    <Button
+        android:id="@+id/Payamount"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/mitti"
+        android:text="Pay Amount"
+        />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseSyncIndicator" />
 
 </RelativeLayout>
