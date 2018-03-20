@@ -27,7 +27,7 @@
 
         <TextView
             android:id="@+id/Challan_payment_amntview"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:paddingLeft="16dp"
             android:layout_centerHorizontal="true"
@@ -35,7 +35,7 @@
             android:layout_weight="1"
             android:background="#55FFFFFF"
             android:drawablePadding="@dimen/dimen_8dp"
-            android:gravity="center_vertical"
+            android:gravity="end"
             android:padding="@dimen/dimen_8dp"
 
             android:textColor="@android:color/black"
@@ -73,7 +73,7 @@
             android:text="Document home delivery.*Charges Apply"/>
         <TextView
             android:id="@+id/deliveryamnt"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:paddingLeft="16dp"
 
@@ -94,6 +94,7 @@
     <EditText
         android:id="@+id/Address"
         android:layout_height="80dp"
+        android:paddingLeft="@dimen/dimen_8dp"
         android:layout_width="match_parent"
         android:layout_below="@+id/Challan_delivery_ll"
         android:background="#50FFFFFF"
